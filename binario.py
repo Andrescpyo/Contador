@@ -1,5 +1,6 @@
 class Binario():
+    def __init__(self):
+        self.numero=0
+
     def valor_bin(self):
-        for i in range(10):
-            binario = bin(i)[2:]
-            print(binario)
+        return bin(self.numero)[2:]

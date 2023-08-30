@@ -1,5 +1,9 @@
 class Octal():
-    def valor_oct (self):
-        for i in range(10):
-            octal = oct(i)
-            print(octal)
+    def __init__(self):
+        self.numero=0
+
+    def valor_oct(self):
+        return oct(self.numero)[2:]
+
+
+

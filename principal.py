@@ -1,28 +1,33 @@
-from decimal import Decimal
+
 from binario import Binario
 from octal import Octal
 from hexadecimal import Hexadecimal
 
-caso = int(input("\n elija: \n1.decimal\n2.binario\n3.octal\n4.hexadecimal\n\n"))
-if caso == 1 :
-    print("\n")
-    if __name__ == '__main__':
-        instanceDecimal = Decimal()
-        instanceDecimal.Valor_decimal()
-elif caso == 2 :
-    print("\n")
-    if __name__ == '__main__':
-        instanceBin = Binario()
-        instanceBin.valor_bin()
+
+caso = int(input("\n elija: \n1.binario\n2.octal\n3.hexadecimal\n\n-"))
+numero= int(input("\n Digita el número hasta el que quieres contar: "))
+
+
+if caso == 1:
+    c = Binario()
+    
+    for i in range(numero+1):
+        c.numero = i
+        print(c.valor_bin())
+
+elif caso == 2:
+    c = Octal()
+    
+    for i in range(numero+1):
+        c.numero = i
+        print(c.valor_oct())
+        
 elif caso == 3:
-    print("\n")
-    if __name__ == '__main__':
-        instanceOct = Octal()
-        instanceOct.valor_oct()
-elif caso == 4:
-    print("\n")
-    if __name__ == '__main__':
-        instanceHex = Hexadecimal()
-        instanceHex.valor_hex()
+    c = Hexadecimal()
+    
+    for i in range(numero+1):
+        c.numero = i
+        print(c.valor_hex())
+
 else :
     print("\nerror")
